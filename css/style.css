@@ -7,6 +7,70 @@
     padding: 0;
 }
 
+/**********************************
+Header section css
+**********************************/
+header{
+    width: 100%;
+    background: #daac00;
+}
+header .nav-item{
+    text-transform: capitalize;
+}
+header .col-md-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+header nav{
+    padding-top: 22px !important;
+    padding-bottom: 22px !important
+}
+header .nav-link{
+    font-size: 22px;
+    font-weight: 600;
+    color: white !important;
+}
+header input{
+    width: 200px !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+    font-size: 22px !important;
+    background: #fcc302 !important;
+}
+header .navbar-brand{
+    margin-right: 0 !important;
+}
+header .input-group{
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
+}
+header input:focus{
+    box-shadow: none !important;
+}
+header input::placeholder{
+    color: #fff !important;
+}
+header .input-group-text{
+    border-radius: 0;
+    border: none;
+    background: #00bec9 !important;
+    width: 70px !important;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff !important;
+    transition: 0.5s;
+}
+.mr-auto, .mx-auto{
+    margin-right: 50px !important;
+}
+header nav .nav-item{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+header .input-group-text:hover{
+    background:  #0672ff !important;
+}
+
+
 
 /************************
    banner section css
@@ -62,46 +126,82 @@
     height: 100vh;
 }
 
-/************************
-   video section css
-*************************/
-.video{
-    width: 100%;
-    height: 100vh;
+
+
+/******************************
+ video section css here 
+*******************************/
+.video-section{
+    margin: 40px 0;
 }
-.video-left{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100vh;
-}
-.video-left h1{
+.video-section h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 42px;
     color: #000;
-    margin-bottom: 0 !important;
+    line-height: 1.3;
+    margin-bottom: 35px;
 }
-.video-left p{
+.video-section p{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 22px;
     color: #000;
     margin: 40px 0;
 }
-.video-text{
-    text-align: left;
+.video-srv-btn{
+    background-color:#FFC400 !important;
+    color: #fff !important;
 }
-.video-btn{
+.video-srv-btn:hover{
+      background: rgb(56, 55, 55) !important;
+      color: #daac00 !important;
+}
+.video-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.video-body{
+    position: relative;
+}
+.video-body .video-img{
+    position: relative;
+    z-index: 2;
+}
+.video-body .img-fluid{
+    position: absolute;
+    width: 100% !important;
+}
+.video-overlay{
+    background: rgba(252, 195, 2,0.5);
+    position: relative;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-overlay a{
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.video-body i{
+    color: #daac00;
+    font-size: 30px;
+}
+.video-shadow{
+    width: 200px;
+    height: 200px;
     background: #fcc302;
-
-}
-.video-right{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100vh;
-}
-.clip{
-    text-align: right;
+    position: absolute;
+    left: -30px;
+    top: 291px;
+    z-index: 1;
 }
 
 
@@ -164,12 +264,14 @@
 /************************
    video-02 section css
 *************************/
-.clip-2{
-    text-align: left;
+.video-section1 .video-shadow{
+    left: 316px !important;
 }
-.video-text-2{
-    text-align: right;
+.videon-section1- .video-body i{
+    transform-origin: center;
+    transform: rotate(180deg);
 }
+
 
 /************************
    title-02 section css
@@ -262,46 +364,42 @@
 
 
 /*****************************
-   backgroun blur section css
+   counter section css
 ******************************/
-.blur{
-    width: 100%;
-    background-image: url(../img/testimonial.jpg);
+.counter-section{
+    background: url(../img/testimonial.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
-    margin-top: 50px;
     position: relative;
+    padding:150px 0px;
 }
-.layer{
-    background-color: rgba(201, 154, 0, 0.7);
+.counter-section .overlay{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    background:rgba(252, 194, 3,0.8);
 }
-.blur .col-md-12{
-    display: flex;
-    text-align: center;
+.counter-section .counter-icon{
+    margin-bottom: 50px;
 }
-.blur .col-md-4{
-    padding-top: 22vh;
-}
-.icon .number{
+.counter-section h3{
     margin-top: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
 }
-.icon .desc{
+  .counter-section p{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
+    margin-bottom: 0;
 }
+
 
 
 /*****************************
